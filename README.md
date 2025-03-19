@@ -14,7 +14,6 @@ A sleek and simple KDE Plasma widget for quick translations using the MyMemory T
 - 🔄 **Two-Way Translation** - Swap source/target languages with one click
 - 📌 **Compact Mode** - Small footprint in your panel when not in use
 
-## Installation 🛠️
 
 ## 🛠️ Installation
   ### KDE Store
