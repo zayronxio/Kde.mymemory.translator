@@ -1,0 +1,1 @@
+# Kde.mymemory.translator
