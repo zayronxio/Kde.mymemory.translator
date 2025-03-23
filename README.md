@@ -2,7 +2,7 @@
 
 A sleek and simple KDE Plasma widget for quick translations using the MyMemory Translation API. No API key required! Seamlessly integrated into your Plasma desktop for a smooth user experience.
 
-![Plasma Translate Plasmoid Demo](https://images.pling.com/img/00/00/24/01/13/2272210/mymemory.png) <!-- Replace with actual screenshot path -->
+![Plasma Translate Plasmoid Demo](https://images.pling.com/img/00/00/24/01/13/2272210/mymemory.png) 
 
 ## Features ✨
 
@@ -10,7 +10,7 @@ A sleek and simple KDE Plasma widget for quick translations using the MyMemory T
 - 🔑 **No API Key Needed** - Uses MyMemory's public API out of the box
 - 🖥️ **Plasma Integration** - Native-looking interface that matches your theme
 - 🌐 **100+ Languages** - Supports most major world languages
-- 📋 **Clipboard Integration** - Automatically paste translated text (in the process of implementation)
+- 📋 **Clipboard Integration** - Automatically paste translated text
 - 🔄 **Two-Way Translation** - Swap source/target languages with one click
 - 📌 **Compact Mode** - Small footprint in your panel when not in use
 
