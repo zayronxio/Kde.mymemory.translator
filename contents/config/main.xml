@@ -12,5 +12,8 @@
     <entry name="targetLa" type="string">
       <default>es</default>
     </entry>
+    <entry name="autoCopy" type="bool">
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

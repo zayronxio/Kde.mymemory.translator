@@ -3,13 +3,14 @@ import "lib" as Lib
 import QtQuick.Layouts
 import QtQuick.Controls
 import org.kde.plasma.components as PlasmaComponents
-import Qt.labs.platform
 import org.kde.plasma.plasmoid
 import "js/translate.js" as Api
 import org.kde.kirigami as Kirigami
 
 Item {
     id: container
+
+    property bool autoCopy: Plasmoid.configuration.autoCopy
 
     Layout.preferredWidth: Kirigami.Units.gridUnit * 18
     Layout.preferredHeight: wrapper.implicitHeight + marginSeperator
@@ -152,6 +153,7 @@ Item {
                 anchors.bottomMargin: - 8
                 anchors.right: parent.right
                 anchors.rightMargin: - 8
+                color: Kirigami.Theme.textColor
                 Kirigami.Icon {
                     source: "translate"
                     color: Kirigami.Theme.backgroundColor
@@ -167,8 +169,8 @@ Item {
                             if (error) {
                                 console.error("Error al traducir:", error);
                             } else {
-                                console.log("Texto traducido:", translatedText);
                                 textTranslate = translatedText;
+                                copyToClipboard(textTranslate)
                                 activeTranslate = true;
                             }
                         });
@@ -197,6 +199,7 @@ Item {
                 }
                 text: textTranslate
             }
+
             Rectangle {
                 width:  Kirigami.Units.gridUnit * 2
                 height: width
@@ -205,9 +208,10 @@ Item {
                 anchors.bottomMargin: - 8
                 anchors.right: parent.right
                 anchors.rightMargin: - 8
-                visible: false // result.text !== ""
+                color: Kirigami.Theme.textColor
+                visible: result.text !== ""
                 Kirigami.Icon {
-                    source: "translate"
+                    source: "edit-copy-symbolic"
                     color: Kirigami.Theme.backgroundColor
                     width: 22
                     height: 22

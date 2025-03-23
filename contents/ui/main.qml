@@ -10,7 +10,6 @@ import "components" as Components
 PlasmoidItem {
     id: root
 
-
     compactRepresentation: MouseArea {
         id: compactRoot
 
