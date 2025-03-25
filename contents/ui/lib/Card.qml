@@ -14,8 +14,8 @@ Item {
     property bool globalBool: true
     property bool enabledColor: false
     property bool enabledCustomColor: Plasmoid.configuration.enabledCustomColor
-    property bool colorizer: Plasmoid.configuration.enabledCustomColor
-    property int shadowOpacity: Plasmoid.configuration.shadowOpacity
+    property bool colorizer: false
+    property int shadowOpacity: 1.0
 
     Rectangle {
         color: backgrounfColor
