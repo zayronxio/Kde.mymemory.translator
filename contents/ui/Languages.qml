@@ -1,31 +1,39 @@
 import QtQuick
 
-ListModel {
-    id: modelLanguage
-    ListElement { name: "English"; code: "en" }
-    ListElement { name: "Español"; code: "es" }
-    ListElement { name: "中文 (Mandarín)"; code: "zh" }
-    ListElement { name: "Português"; code: "pt" }
-    ListElement { name: "Русский"; code: "ru" }
-    ListElement { name: "हिन्दी"; code: "hi" }
-    ListElement { name: "Deutsch"; code: "de" }
-    ListElement { name: "Nederlands"; code: "nl" }
-    ListElement { name: "日本語"; code: "ja" }
-    ListElement { name: "Français"; code: "fr" }
-    ListElement { name: "Italiano"; code: "it" }
-    ListElement { name: "한국어"; code: "ko" }
-    ListElement { name: "العربية"; code: "ar" }
-    ListElement { name: "Türkçe"; code: "tr" }
-    ListElement { name: "Polski"; code: "pl" }
-    ListElement { name: "Svenska"; code: "sv" }
-    ListElement { name: "Dansk"; code: "da" }
-    ListElement { name: "Norsk"; code: "no" }
-    ListElement { name: "Suomi"; code: "fi" }
-    ListElement { name: "Ελληνικά"; code: "el" }
-    ListElement { name: "Čeština"; code: "cs" }
-    ListElement { name: "Magyar"; code: "hu" }
-    ListElement { name: "Română"; code: "ro" }
-    ListElement { name: "Български"; code: "bg" }
-    ListElement { name: "Indonesia"; code: "id" }
-    ListElement { name: "Tiếng Việt"; code: "vi" }
+Item {
+
+    property alias fullLanguage: fullLanguage
+
+    ListModel {
+        id: fullLanguage
+    }
+
+    Component.onCompleted: {
+        fullLanguage.append({ name: i18n("English"), code: "en" });
+        fullLanguage.append({ name: i18n("Spanish"), code: "es" });
+        fullLanguage.append({ name: i18n("Chinese (Mandarin)"), code: "zh" });
+        fullLanguage.append({ name: i18n("Portuguese"), code: "pt" });
+        fullLanguage.append({ name: i18n("Russian"), code: "ru" });
+        fullLanguage.append({ name: i18n("Hindi"), code: "hi" });
+        fullLanguage.append({ name: i18n("German"), code: "de" });
+        fullLanguage.append({ name: i18n("Dutch"), code: "nl" });
+        fullLanguage.append({ name: i18n("Japanese"), code: "ja" });
+        fullLanguage.append({ name: i18n("French"), code: "fr" });
+        fullLanguage.append({ name: i18n("Italian"), code: "it" });
+        fullLanguage.append({ name: i18n("Korean"), code: "ko" });
+        fullLanguage.append({ name: i18n("Arabic"), code: "ar" });
+        fullLanguage.append({ name: i18n("Turkish"), code: "tr" });
+        fullLanguage.append({ name: i18n("Polish"), code: "pl" });
+        fullLanguage.append({ name: i18n("Swedish"), code: "sv" });
+        fullLanguage.append({ name: i18n("Danish"), code: "da" });
+        fullLanguage.append({ name: i18n("Norwegian"), code: "no" });
+        fullLanguage.append({ name: i18n("Finnish"), code: "fi" });
+        fullLanguage.append({ name: i18n("Greek"), code: "el" });
+        fullLanguage.append({ name: i18n("Czech"), code: "cs" });
+        fullLanguage.append({ name: i18n("Hungarian"), code: "hu" });
+        fullLanguage.append({ name: i18n("Romanian"), code: "ro" });
+        fullLanguage.append({ name: i18n("Bulgarian"), code: "bg" });
+        fullLanguage.append({ name: i18n("Indonesian"), code: "id" });
+        fullLanguage.append({ name: i18n("Vietnamese"), code: "vi" });
+    }
 }

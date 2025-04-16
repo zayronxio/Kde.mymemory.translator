@@ -27,7 +27,7 @@ Item {
     property bool activeTranslate: false
 
     Languages {
-        id: modelLanguage
+        id: languages
     }
 
     function copyToClipboard(string) {
@@ -60,12 +60,13 @@ Item {
             width: parent.width
             height: Kirigami.Units.gridUnit * 2
             spacing: Kirigami.Units.gridUnit
+
             PlasmaComponents.ComboBox {
                 id: sourceLan
                 textRole: "name"
                 valueRole: "code"
                 width: (parent.width / 2) - Kirigami.Units.gridUnit * 2
-                model: modelLanguage
+                model: languages.fullLanguage
 
                 onActivated: {
                     sourceLang = currentValue
@@ -107,7 +108,7 @@ Item {
                 textRole: "name"
                 valueRole: "code"
                 width: (parent.width / 2) - Kirigami.Units.gridUnit * 2
-                model: modelLanguage
+                model: languages.fullLanguage
                 onActivated: {
                     targetLang = currentValue
                     Plasmoid.configuration.targetLa = currentValue.toString()
@@ -126,6 +127,7 @@ Item {
                 anchors.centerIn: parent
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignTop
+                placeholderText: i18n("Enter the text you wish to translate")
                 wrapMode: Text.Wrap
                 background: Rectangle {
                     width: txt.width
